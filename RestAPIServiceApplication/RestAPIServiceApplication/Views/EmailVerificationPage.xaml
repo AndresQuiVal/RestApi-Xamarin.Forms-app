@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage 
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:viewModels="clr-namespace:RestAPIServiceApplication.ViewModels"
+    xmlns:pancakeView="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+    xmlns:cc="clr-namespace:RestAPIServiceApplication.CustomControls"
+    mc:Ignorable="d"
+    x:Class="RestAPIServiceApplication.Views.EmailVerificationPage">
+    <ContentPage.BindingContext>
+        <viewModels:EmailVerificationViewModel/>
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <StackLayout
+            Padding="10">
+            <Label
+                Text="Email verification"
+                FontSize="Large"
+                FontAttributes="Bold"
+                HorizontalOptions="Start">
+            </Label>
+            <Label
+                FontSize="Small"
+                Text="Enter your email in the input box, a verification code will be sent to you, input over the entry box below the email entry one">
+            </Label>
+            <cc:RoundedEntry
+                CornerRadius="15"
+                PlaceHolder="someone@example.com"
+                Text="{Binding Email}"
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="Center">
+            </cc:RoundedEntry>
+            <pancakeView:PancakeView
+                        HorizontalOptions="FillAndExpand"
+                        BackgroundGradientAngle="90"
+                        BackgroundGradientStartColor="#3f48cc"
+                        BackgroundGradientEndColor="#737cff"
+                        CornerRadius="100"
+                        HasShadow="True">
+                <Label
+                            Margin="12"
+                            HorizontalOptions="Center"
+                            FontSize="18"
+                            Text="Send verification code"
+                            FontAttributes="Bold"
+                            TextColor="White">
+                </Label>
+                <pancakeView:PancakeView.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding SendVerificationCodeCommand}"/>
+                </pancakeView:PancakeView.GestureRecognizers>
+            </pancakeView:PancakeView>
+            <!--<Button
+                HorizontalOptions="FillAndExpand"
+                Text="Send verification code"
+                Command="{Binding SendVerificationCodeCommand}"
+                BackgroundColor="Blue"
+                TextColor="White">
+            </Button>-->
+            <cc:RoundedEntry
+                CornerRadius="15"
+                PlaceHolder="Enter the verification code from your email account"
+                Text="{Binding VerificationCode}"
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="Center">
+            </cc:RoundedEntry>
+            <ActivityIndicator
+                IsRunning="{Binding IsRunning}"
+                VerticalOptions="End">
+            </ActivityIndicator>
+            <pancakeView:PancakeView
+                        HorizontalOptions="FillAndExpand"
+                        BackgroundGradientAngle="90"
+                        BackgroundGradientStartColor="#e00000"
+                        BackgroundGradientEndColor="#ff5959"
+                        CornerRadius="100"
+                        HasShadow="True">
+                <Label
+                            Margin="12"
+                            HorizontalOptions="Center"
+                            FontSize="18"
+                            Text="Verify code"
+                            FontAttributes="Bold"
+                            TextColor="White">
+                </Label>
+                <pancakeView:PancakeView.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding VerifyCodeCommand}"/>
+                </pancakeView:PancakeView.GestureRecognizers>
+            </pancakeView:PancakeView>
+            <!--<Button
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="End"
+                Text="Verify code"
+                Command="{Binding VerifyCodeCommand}"
+                BackgroundColor="Red"
+                TextColor="White">
+            </Button>-->
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

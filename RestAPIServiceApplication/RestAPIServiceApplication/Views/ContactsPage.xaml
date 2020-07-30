@@ -1,0 +1,141 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage 
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:viewModels="clr-namespace:RestAPIServiceApplication.ViewModels"
+    xmlns:cc="clr-namespace:RestAPIServiceApplication.CustomControls"
+    xmlns:pancakeView="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+    mc:Ignorable="d"
+    BackgroundImageSource="background.png"
+    x:Class="RestAPIServiceApplication.Views.ContactsPage">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem
+            Text="New Contact"
+            Command="{Binding NewContactCommand}">
+        </ToolbarItem>
+    </ContentPage.ToolbarItems>
+    <!--<ContentPage.BindingContext>
+        <viewModels:ContactsViewModel/>
+    </ContentPage.BindingContext>-->
+    <ContentPage.Content>
+        <ScrollView>
+
+            <Grid
+                Padding="5"
+                BackgroundColor="Transparent">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Label
+                    FontSize="20"
+                    FontAttributes="Bold"
+                Text="Contacts"
+                TextColor="White"
+                HorizontalOptions="Center">
+                </Label>
+                <cc:RoundedSearchBar 
+                Margin="10, 25, 10, 0"
+                Text="{Binding SearchText, Mode=TwoWay}"
+                PlaceHolder="Search by Name, Phone number, Alias, etc"
+                SearchCommand="{Binding SearchCommand}">
+                </cc:RoundedSearchBar>
+            <ListView
+                Margin="5, 5, 5, 5"
+                SeparatorVisibility="None"
+                BackgroundColor="Transparent"
+                Grid.Row="1"
+                ItemsSource="{Binding ContactsCollection}"
+                SelectedItem="{Binding SelectedContact}"
+                HasUnevenRows="True"
+                IsRefreshing="{Binding IsRefreshing}"
+                IsPullToRefreshEnabled="True"
+                RefreshCommand="{Binding RefreshContactsCommand}">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <pancakeView:PancakeView
+                                    CornerRadius="10"
+                                    HasShadow="True"
+                                    Margin="20"
+                                    BackgroundColor="WhiteSmoke">
+                                    <Grid
+                                    Padding="20">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition/>
+                                            <RowDefinition Height="Auto"/>
+                                            <RowDefinition Height="Auto"/>
+                                        </Grid.RowDefinitions>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="Auto"/>
+                                            <ColumnDefinition/>
+                                        </Grid.ColumnDefinitions>
+                                        <Grid.GestureRecognizers>
+                                            <TapGestureRecognizer Command="{Binding ViewContactInfo}"/>
+                                        </Grid.GestureRecognizers>
+                                        <pancakeView:PancakeView
+                                        Margin="10"
+                                        CornerRadius="100"
+                                        HeightRequest="50">
+                                            <Image
+                                            HeightRequest="50"
+                                            Source="{Binding ContactImageSource}">
+                                            </Image>
+                                        </pancakeView:PancakeView>
+                                        <Label
+                                            FontAttributes="Bold"
+                                        Grid.Column="1"
+                                        Text="{Binding ContactName}"
+                                        FontSize="Large"
+                                        TextColor="Black">
+                                        </Label>
+                                        <BoxView
+                                            HeightRequest="1"
+                                            BackgroundColor="Black"
+                                            HorizontalOptions="FillAndExpand"
+                                            Grid.ColumnSpan="2"
+                                            Grid.Row="1"></BoxView>
+                                        <Label
+                                            Margin="40,0,0,0"
+                                        Grid.Column="1"
+                                            Grid.Row="2"
+                                        Text="{Binding ContactAlias}"
+                                        FontSize="Medium">
+                                        </Label>
+                                        <Label Margin="0,0,20,0"
+                                        Grid.Row="2"
+                                        Grid.ColumnSpan="1"
+                                        HorizontalOptions="CenterAndExpand"
+                                            FontSize="Medium"
+                                        Text="{Binding ContactNumber}"
+                                        FontAttributes="Bold">
+                                        </Label>
+                                    </Grid>
+                                </pancakeView:PancakeView>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </Grid>
+        </ScrollView>
+        <!--<StackLayout
+            Padding="15">
+            <Label
+                HorizontalOptions="Start"
+                Text="My contacts"
+                FontSize="30"
+                FontAttributes="Bold"
+                TextColor="Black">
+            </Label>
+            <SearchBar
+                Text="{Binding SearchText}"
+                Placeholder="Search by Name, Phone number, Alias, etc"
+                SearchCommand="{Binding SearchCommand}">
+                --><!--SearchCommandParameter="{Binding Text,
+                    Source={x:Reference SearchBar}}"--><!--
+            </SearchBar>
+        </StackLayout>-->
+    </ContentPage.Content>
+</ContentPage>

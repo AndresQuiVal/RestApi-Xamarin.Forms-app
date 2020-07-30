@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<MasterDetailPage 
+    BackgroundColor="Blue"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:viewModels="clr-namespace:RestAPIServiceApplication.ViewModels"
+    xmlns:views="clr-namespace:RestAPIServiceApplication.Views"
+    xmlns:pancakeView="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+    mc:Ignorable="d"
+    x:Class="RestAPIServiceApplication.Views.MasterDetail">
+    <MasterDetailPage.BindingContext>
+        <viewModels:MasterDetailViewModel/>
+    </MasterDetailPage.BindingContext>
+    <MasterDetailPage.Master>
+        <ContentPage
+            Title="Modules"
+            BackgroundColor="Blue">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <!--<pancakeView:PancakeView
+                    HeightRequest="150"
+                    HasShadow="True"
+                    CornerRadius="5">
+                </pancakeView:PancakeView>-->
+                <Image
+                    Source="{Binding ProfileImageSource}"
+                    HeightRequest="150"
+                    Aspect="AspectFill">
+                </Image>
+                <Label
+                    Text="{Binding UserName}"
+                    HorizontalOptions="Start"
+                    VerticalOptions="Start"
+                    FontAttributes="Bold"
+                    FontSize="20"
+                    TextColor="Black"
+                    Margin="10">
+                </Label>
+                <ListView
+                    SeparatorVisibility="None"
+                    Grid.Row="1"
+                    ItemsSource="{Binding ModulesCollection}"
+                    HasUnevenRows="True">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <StackLayout
+                                    Margin="10"
+                                    HorizontalOptions="Center"
+                                    Orientation="Horizontal">
+                                    <StackLayout.GestureRecognizers>
+                                        <TapGestureRecognizer Command="{Binding ModuleCommand}"/>
+                                    </StackLayout.GestureRecognizers>
+                                    <Image
+                                        VerticalOptions="Center"
+                                        Source="{Binding ModuleIcon}">
+                                    </Image>
+                                    <Label
+                                        VerticalOptions="Center"
+                                        FontSize="18"
+                                        TextColor="White"
+                                        Text="{Binding ModuleTitle}">
+                                    </Label>
+                                </StackLayout>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </Grid>
+        </ContentPage>
+    </MasterDetailPage.Master>
+    <!--<MasterDetailPage.Detail>
+        <NavigationPage
+            x:Name="Navigation">
+            <x:Arguments>
+                <views:ContactsPage/>
+            </x:Arguments>
+        </NavigationPage>
+    </MasterDetailPage.Detail>-->
+</MasterDetailPage>

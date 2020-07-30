@@ -1,0 +1,15 @@
+C:\Users\andre\source\repos\RestAPIServiceApplication\RestAPIServiceApplication.Entities\bin\Debug\netstandard2.0\RestAPIServiceApplication.Entities.deps.json
+C:\Users\andre\source\repos\RestAPIServiceApplication\RestAPIServiceApplication.Entities\bin\Debug\netstandard2.0\RestAPIServiceApplication.Entities.dll
+C:\Users\andre\source\repos\RestAPIServiceApplication\RestAPIServiceApplication.Entities\bin\Debug\netstandard2.0\RestAPIServiceApplication.Entities.pdb
+C:\Users\andre\source\repos\RestAPIServiceApplication\RestAPIServiceApplication.Entities\bin\Debug\netstandard2.0\System.ComponentModel.DataAnnotations.dll
+C:\Users\andre\source\repos\RestAPIServiceApplication\RestAPIServiceApplication.Entities\bin\Debug\netstandard2.0\System.Configuration.dll
+C:\Users\andre\source\repos\RestAPIServiceApplication\RestAPIServiceApplication.Entities\bin\Debug\netstandard2.0\System.Security.dll
+C:\Users\andre\source\repos\RestAPIServiceApplication\RestAPIServiceApplication.Entities\bin\Debug\netstandard2.0\System.ComponentModel.DataAnnotations.xml
+C:\Users\andre\source\repos\RestAPIServiceApplication\RestAPIServiceApplication.Entities\bin\Debug\netstandard2.0\System.Configuration.xml
+C:\Users\andre\source\repos\RestAPIServiceApplication\RestAPIServiceApplication.Entities\bin\Debug\netstandard2.0\System.Security.xml
+C:\Users\andre\source\repos\RestAPIServiceApplication\RestAPIServiceApplication.Entities\obj\Debug\netstandard2.0\RestAPIServiceApplication.Entities.csprojAssemblyReference.cache
+C:\Users\andre\source\repos\RestAPIServiceApplication\RestAPIServiceApplication.Entities\obj\Debug\netstandard2.0\RestAPIServiceApplication.Entities.AssemblyInfoInputs.cache
+C:\Users\andre\source\repos\RestAPIServiceApplication\RestAPIServiceApplication.Entities\obj\Debug\netstandard2.0\RestAPIServiceApplication.Entities.AssemblyInfo.cs
+C:\Users\andre\source\repos\RestAPIServiceApplication\RestAPIServiceApplication.Entities\obj\Debug\netstandard2.0\RestAPIServiceApplication.Entities.csproj.CopyComplete
+C:\Users\andre\source\repos\RestAPIServiceApplication\RestAPIServiceApplication.Entities\obj\Debug\netstandard2.0\RestAPIServiceApplication.Entities.dll
+C:\Users\andre\source\repos\RestAPIServiceApplication\RestAPIServiceApplication.Entities\obj\Debug\netstandard2.0\RestAPIServiceApplication.Entities.pdb

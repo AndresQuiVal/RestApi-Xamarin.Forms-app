@@ -1,0 +1,1 @@
+C:\Users\andre\RestAPIServiceApplication\RestAPIServiceApplication\RestAPIServiceApplication.UWP\RestAPIServiceApplication.UWP.csproj;x86

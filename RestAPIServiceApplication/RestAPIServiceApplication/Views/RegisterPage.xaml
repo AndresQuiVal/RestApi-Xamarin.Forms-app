@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage 
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:viewModels="clr-namespace:RestAPIServiceApplication.ViewModels"
+    xmlns:pancakeView="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView" 
+    xmlns:cc="clr-namespace:RestAPIServiceApplication.CustomControls"
+    mc:Ignorable="d"
+    x:Class="RestAPIServiceApplication.Views.RegisterPage">
+    <ContentPage.BindingContext>
+        <viewModels:RegisterViewModel/>
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout
+            Padding="15"
+            HorizontalOptions="FillAndExpand">
+                <Label
+                    Margin="10,10,10,15"
+                    Text="Register new user"
+                    FontSize="Large"
+                    FontAttributes="Bold"
+                    HorizontalOptions="Start">
+                </Label>
+                <Label
+                Text="First name"
+                FontSize="Medium"
+                HorizontalOptions="Center">
+                </Label>
+                <!--<Entry
+                HorizontalOptions="FillAndExpand"
+                Placeholder="someone@example.com"
+                Text="{Binding FirstName}">
+                </Entry>-->
+                <cc:RoundedEntry
+                    CornerRadius="15"
+                    Text="{Binding FirstName, Mode=OneWayToSource}"
+                    PlaceHolder="ex. Andrés">
+                </cc:RoundedEntry>
+                <Label
+                Text="Last name"
+                FontSize="Medium"
+                HorizontalOptions="Center">
+                </Label>
+                <!--<Entry
+                HorizontalOptions="FillAndExpand"
+                Placeholder="someone@example.com"
+                Text="{Binding LastName}">
+                </Entry>-->
+                <cc:RoundedEntry
+                CornerRadius="15"
+                    PlaceHolder="ex. Quiroz Valdovinos"
+                    Text="{Binding LastName, Mode=TwoWay}">
+                </cc:RoundedEntry>
+                <Label
+                Text="Email"
+                FontSize="Medium"
+                HorizontalOptions="Center">
+                </Label>
+                <cc:RoundedEntry
+                CornerRadius="15"
+                    PlaceHolder="someone@example.com"
+                    Text="{Binding Email, Mode=TwoWay}">
+                </cc:RoundedEntry>
+                <Label
+                Text="Password"
+                FontSize="Medium"
+                HorizontalOptions="Center">
+                </Label>
+                <cc:RoundedEntry
+                CornerRadius="15"
+                PlaceHolder="6 digit, all caracters enabled"
+                Text="{Binding Password, Mode=TwoWay}"
+                IsPassword="True">
+                </cc:RoundedEntry>
+                <Label
+                Text="Confirm password"
+                FontSize="Medium"
+                HorizontalOptions="Center">
+                </Label>
+                <cc:RoundedEntry
+                CornerRadius="15"
+                PlaceHolder="6 digit, all caracters enabled"
+                Text="{Binding ConfirmPassword, Mode=TwoWay}"
+                IsPassword="True">
+                </cc:RoundedEntry>
+                <ActivityIndicator
+                IsRunning="{Binding IsRunning}">
+                </ActivityIndicator>
+                <pancakeView:PancakeView
+                        HorizontalOptions="FillAndExpand"
+                        BackgroundGradientAngle="90"
+                        BackgroundGradientStartColor="#e00000"
+                        BackgroundGradientEndColor="#ff5959"
+                        CornerRadius="100"
+                        HasShadow="True">
+                    <Label
+                            Margin="8"
+                            HorizontalOptions="Center"
+                            FontSize="18"
+                            Text="Register"
+                            FontAttributes="Bold"
+                            TextColor="White">
+                    </Label>
+                    <pancakeView:PancakeView.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding RegisterCommand}"/>
+                    </pancakeView:PancakeView.GestureRecognizers>
+                </pancakeView:PancakeView>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

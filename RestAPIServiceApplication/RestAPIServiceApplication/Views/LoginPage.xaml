@@ -1,0 +1,207 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage 
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:viewModels="clr-namespace:RestAPIServiceApplication.ViewModels"
+    xmlns:pancakeView="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+    xmlns:cc="clr-namespace:RestAPIServiceApplication.CustomControls"
+    BackgroundColor="#3f48cc"
+    mc:Ignorable="d"
+    x:Class="RestAPIServiceApplication.Views.LoginPage">
+    <ContentPage.Resources>
+        <Style TargetType="Entry" x:Key="EntryStyle">
+            <Setter Property="Margin" Value="15, 0"/>
+            <Setter Property="HorizontalOptions" Value="FillAndExpand"/>
+            <Setter Property="FontSize" Value="13.5"/>
+        </Style>
+        
+        <Style TargetType="Frame" x:Key="FrameEntryStyle">
+            <Setter Property="HasShadow" Value="True"/>
+            <Setter Property="Margin" Value="30, 10"/>
+            <Setter Property="Padding" Value="0, 0, 0, -9"/>
+            <Setter Property="CornerRadius" Value="100"/>
+            <Setter Property="BackgroundColor" Value="WhiteSmoke"/>
+            <Setter Property="HeightRequest" Value="40"/>
+            <Setter Property="IsClippedToBounds" Value="True"/>
+            <Setter Property="HorizontalOptions" Value="FillAndExpand"/>
+        </Style>
+    </ContentPage.Resources>
+    <ContentPage.BindingContext>
+        <viewModels:LoginViewModel/>
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <StackLayout
+            Padding="15"
+            HorizontalOptions="FillAndExpand">
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                <Label
+                    Margin="5"
+                    FontAttributes="Bold"
+                    FontSize="30"
+                    Text="Contacts"
+                    TextColor="White"
+                    HorizontalOptions="Center">
+                </Label>
+                    <pancakeView:PancakeView
+                CornerRadius="10"
+                BackgroundColor="Red"
+                BackgroundGradientAngle="90"
+                        BackgroundGradientStartColor="#e00000"
+                        BackgroundGradientEndColor="#ff5959">
+                        <Label
+                    Margin="10, 2"
+                    FontAttributes="Bold"
+                    FontSize="30"
+                    Text="App"
+                    TextColor="White"
+                    HorizontalOptions="Center"></Label>
+
+                    </pancakeView:PancakeView>
+            </StackLayout>
+            <pancakeView:PancakeView
+                HasShadow="True"
+                CornerRadius="10"
+                Padding="5"
+                Margin="10,30,10,10"
+                VerticalOptions="Center"
+                BackgroundColor="White">
+                <StackLayout>
+
+                    <!--<Image
+                        Margin="0"
+                    x:Name="ImageLogo"
+                    Source="phoneLogo"
+                    HeightRequest="100"
+                    VerticalOptions="Start">
+                    </Image>-->
+                    <!--<Label
+                        Margin="10,10,10,10"
+                Text="Login"
+                        FontAttributes="Bold"
+                        TextColor="Black"
+                FontSize="30"
+                HorizontalOptions="Center">
+                    </Label>-->
+                    <Label
+                        Margin="10,10,10,10"
+                Text="Email"
+                        FontAttributes="Bold"
+                FontSize="Large"
+                HorizontalOptions="Center">
+                    </Label>
+                    <Frame
+                Style="{StaticResource FrameEntryStyle}">
+                        <Entry
+                    Style="{StaticResource EntryStyle}"
+                    Placeholder="someone@example.com"
+                    Text="{Binding Email}">
+                        </Entry>
+                    </Frame>
+                    <!--<cc:RoundedEntry
+                CornerRadius="15"
+                PlaceHolder="someone@example.com"
+                Text="{Binding Email}">
+            </cc:RoundedEntry>-->
+                    <Label
+                        FontAttributes="Bold"
+                Text="Password"
+                FontSize="Large"
+                HorizontalOptions="Center">
+                    </Label>
+                    <Frame
+                Style="{StaticResource FrameEntryStyle}">
+                        <Entry
+                    Style="{StaticResource EntryStyle}"
+                    Placeholder="6 digit, all caracters enabled"
+                    Text="{Binding Password}"
+                    IsPassword="True">
+                        </Entry>
+                    </Frame>
+                    <!--<cc:RoundedEntry
+                CornerRadius="15"
+                PlaceHolder="6 digit, all caracters enabled"
+                IsPassword="True"
+                Text="{Binding Password}">
+            </cc:RoundedEntry>-->
+                    <!--<cc:ShadowEntry
+                CornerRadius="5"
+                BackgroundColor="WhiteSmoke"
+                Placeholder="6 digit, all caracters enabled">
+            </cc:ShadowEntry>-->
+                    <ActivityIndicator
+                        HeightRequest="20"
+                IsRunning="{Binding IsRunning}">
+                    </ActivityIndicator>
+                    <Label
+                Text="Forgot your password?"
+                TextColor="Blue"
+                HorizontalOptions="Center">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding RecoverPasswordCommand}"/>
+                        </Label.GestureRecognizers>
+                    </Label>
+                    <StackLayout
+                Padding="10"
+                Spacing="15">
+                        <!--<Button
+                    CornerRadius="100"
+                    HorizontalOptions="FillAndExpand"
+                    Text="Login"
+                    Command="{Binding LoginCommand}"
+                    BackgroundColor="Blue"
+                    TextColor="White">
+                </Button>-->
+                        <pancakeView:PancakeView
+                        HorizontalOptions="FillAndExpand"
+                        BackgroundGradientAngle="90"
+                        BackgroundGradientStartColor="#3f48cc"
+                        BackgroundGradientEndColor="#737cff"
+                        CornerRadius="100"
+                        HasShadow="True">
+                            <Label
+                                x:Name="loginLabel"
+                            Margin="8"
+                            HorizontalOptions="Center"
+                            FontSize="18"
+                            Text="Login"
+                            FontAttributes="Bold"
+                            TextColor="White">
+                            </Label>
+                            <pancakeView:PancakeView.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding LoginCommand}"/>
+                            </pancakeView:PancakeView.GestureRecognizers>
+                        </pancakeView:PancakeView>
+                        <!--<Button
+                    HorizontalOptions="FillAndExpand"
+                    Text="Register"
+                    Command="{Binding RegisterViewCommand}"
+                    BackgroundColor="Red"
+                    TextColor="White">
+                </Button>-->
+                        <pancakeView:PancakeView
+                        HorizontalOptions="FillAndExpand"
+                        BackgroundGradientAngle="90"
+                        BackgroundGradientStartColor="#e00000"
+                        BackgroundGradientEndColor="#ff5959"
+                        CornerRadius="100"
+                        HasShadow="True">
+                            <Label
+                            Margin="8"
+                            HorizontalOptions="Center"
+                            FontSize="18"
+                            Text="Register"
+                            FontAttributes="Bold"
+                            TextColor="White">
+                            </Label>
+                            <pancakeView:PancakeView.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding RegisterViewCommand}"/>
+                            </pancakeView:PancakeView.GestureRecognizers>
+                        </pancakeView:PancakeView>
+                    </StackLayout>
+                </StackLayout>
+            </pancakeView:PancakeView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

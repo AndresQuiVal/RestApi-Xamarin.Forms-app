@@ -1,0 +1,141 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage 
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:viewModels="clr-namespace:RestAPIServiceApplication.ViewModels"
+    xmlns:pancakeView="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+    xmlns:cc="clr-namespace:RestAPIServiceApplication.CustomControls"
+    mc:Ignorable="d"
+    x:Class="RestAPIServiceApplication.Views.ContactDetailsPage">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout
+            Padding="15"
+            HorizontalOptions="FillAndExpand">
+                <Label
+                Margin="10,10,10,15"
+                Text="Edit contact"
+                    FontAttributes="Bold"
+                FontSize="Large"
+                HorizontalOptions="Start">
+                </Label>
+                <pancakeView:PancakeView
+                    HorizontalOptions="Center"
+                    CornerRadius="100"
+                    HeightRequest="200">
+                    <Image
+                        HeightRequest="200"
+                        Source="{Binding ContactImage}">
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding ChangeImageCommand}"/>
+                        </Image.GestureRecognizers>
+                    </Image>
+                </pancakeView:PancakeView>
+                <Label
+                Text="Name"
+                FontSize="Medium"
+                HorizontalOptions="Center">
+                </Label>
+                <cc:RoundedEntry
+                    CornerRadius="15"
+                HorizontalOptions="FillAndExpand"
+                PlaceHolder="ex. Andres Quiroz Valdovinos"
+                Text="{Binding Contact.ContactName}">
+                </cc:RoundedEntry>
+                <Label
+                Text="Alias"
+                FontSize="Medium"
+                HorizontalOptions="Center">
+                </Label>
+                <cc:RoundedEntry
+                    CornerRadius="15"
+                HorizontalOptions="FillAndExpand"
+                PlaceHolder="ex. The Andrew"
+                Text="{Binding Contact.ContactAlias}">
+                </cc:RoundedEntry>
+                <Label
+                Text="Phone number"
+                FontSize="Medium"
+                HorizontalOptions="Center">
+                </Label>
+                <cc:RoundedEntry
+                    CornerRadius="15"
+                HorizontalOptions="FillAndExpand"
+                PlaceHolder="complete phone number"
+                Text="{Binding Contact.ContactNumber}">
+                </cc:RoundedEntry>
+                <Label
+                Text="Company name"
+                FontSize="Medium"
+                HorizontalOptions="Center">
+                </Label>
+                <cc:RoundedEntry
+                    CornerRadius="15"
+                HorizontalOptions="FillAndExpand"
+                PlaceHolder="ex. facebook"
+                Text="{Binding Contact.ContactCompanyName}">
+                </cc:RoundedEntry>
+                <ActivityIndicator
+                IsRunning="{Binding IsRunning}">
+                </ActivityIndicator>
+                <StackLayout 
+                Orientation="Horizontal">
+                    <pancakeView:PancakeView
+                        HorizontalOptions="FillAndExpand"
+                        BackgroundGradientAngle="90"
+                        BackgroundGradientStartColor="#e00000"
+                        BackgroundGradientEndColor="#ff5959"
+                        CornerRadius="100"
+                        HasShadow="True">
+                        <Label
+                            Margin="12"
+                            HorizontalOptions="Center"
+                            FontSize="18"
+                            Text="Delete Contact"
+                            FontAttributes="Bold"
+                            TextColor="White">
+                        </Label>
+                        <pancakeView:PancakeView.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding DeleteContactCommand}"/>
+                        </pancakeView:PancakeView.GestureRecognizers>
+                    </pancakeView:PancakeView>
+                    <!--<Button
+                    HorizontalOptions="FillAndExpand"
+                    Text="Delete Contact"
+                    Command="{Binding DeleteContactCommand}"
+                    BackgroundColor="Red"
+                    TextColor="White">
+                    </Button>-->
+                    <pancakeView:PancakeView
+                        HorizontalOptions="FillAndExpand"
+                        BackgroundGradientAngle="90"
+                        BackgroundGradientStartColor="#3f48cc"
+                        BackgroundGradientEndColor="#737cff"
+                        CornerRadius="100"
+                        HasShadow="True">
+                        <Label
+                            Margin="12"
+                            HorizontalOptions="Center"
+                            FontSize="18"
+                            Text="Edit Contact"
+                            FontAttributes="Bold"
+                            TextColor="White">
+                        </Label>
+                        <pancakeView:PancakeView.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding EditContactCommand}"/>
+                        </pancakeView:PancakeView.GestureRecognizers>
+                    </pancakeView:PancakeView>
+                    <!--<Button
+                    HorizontalOptions="FillAndExpand"
+                    Text="Edit Contact"
+                    Command="{Binding EditContactCommand}"
+                    BackgroundColor="Blue"
+                    TextColor="White">
+                    </Button>-->
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

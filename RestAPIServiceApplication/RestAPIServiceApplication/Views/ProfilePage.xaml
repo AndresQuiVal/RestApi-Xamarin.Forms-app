@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage 
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:pancakeView="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+    xmlns:cc="clr-namespace:RestAPIServiceApplication.CustomControls"
+    mc:Ignorable="d"
+    x:Class="RestAPIServiceApplication.Views.ProfilePage">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout
+                Padding="10">
+                <pancakeView:PancakeView
+                    Margin="10"
+                    HorizontalOptions="Center"
+                    CornerRadius="100"
+                    HeightRequest="250">
+                    <Image
+                        Aspect="AspectFit"
+                        HeightRequest="250"
+                        Source="{Binding ProfileImage}">
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding ChangeImageCommand}"/>
+                        </Image.GestureRecognizers>
+                    </Image>
+                </pancakeView:PancakeView>
+                <Label
+                    Text="First name"
+                    FontSize="Medium"
+                    HorizontalOptions="Center">
+                </Label>
+                <cc:RoundedEntry
+                    CornerRadius="15"
+                    HorizontalOptions="FillAndExpand"
+                    PlaceHolder="ex. Andres Quiroz Valdovinos"
+                    Text="{Binding FirstName}">
+                </cc:RoundedEntry>
+                <Label
+                    Text="Last name"
+                    FontSize="Medium"
+                    HorizontalOptions="Center">
+                </Label>
+                <cc:RoundedEntry
+                    CornerRadius="15"
+                    HorizontalOptions="FillAndExpand"
+                    PlaceHolder="ex. The Andrew"
+                    Text="{Binding LastName}">
+                </cc:RoundedEntry>
+                <ActivityIndicator
+                    IsRunning="{Binding IsRunning}">
+                </ActivityIndicator>
+                <pancakeView:PancakeView
+                    BackgroundGradientAngle="90"
+                    BackgroundGradientStartColor="#3f48cc"
+                    BackgroundGradientEndColor="#737cff"
+                    CornerRadius="100"
+                    HasShadow="True">
+                    <Label
+                        Margin="12"
+                        HorizontalOptions="Center"
+                        FontSize="18"
+                        Text="Save changes"
+                        FontAttributes="Bold"
+                        TextColor="White">
+                    </Label>
+                    <pancakeView:PancakeView.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding SaveProfileChangesCommand}"/>
+                    </pancakeView:PancakeView.GestureRecognizers>
+                </pancakeView:PancakeView>
+                <!--<Button
+                    HorizontalOptions="FillAndExpand"
+                    Text="Save changes"
+                    Command="{Binding SaveProfileChangesCommand}"
+                    BackgroundColor="Blue"
+                    TextColor="White">
+                </Button>-->
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

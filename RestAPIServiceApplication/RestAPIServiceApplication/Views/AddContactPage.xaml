@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:viewModels="clr-namespace:RestAPIServiceApplication.ViewModels"
+    xmlns:pancakeView="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+    xmlns:cc="clr-namespace:RestAPIServiceApplication.CustomControls"
+    mc:Ignorable="d"
+    x:Class="RestAPIServiceApplication.Views.AddContactPage">
+    <ContentPage.BindingContext>
+        <viewModels:AddContactViewModel/>
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout
+                Padding="15"
+                HorizontalOptions="FillAndExpand">
+                <Label
+                    Margin="10,10,10,15"
+                    Text="Add new contact"
+                    FontSize="Large"
+                    FontAttributes="Bold"
+                    HorizontalOptions="Start">
+                </Label>
+                <pancakeView:PancakeView
+                HorizontalOptions="Center"
+                CornerRadius="100"
+                HeightRequest="200">
+                    <Image
+                        HeightRequest="200"
+                        Source="{Binding ContactImage}">
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding ChangeImageCommand}"/>
+                        </Image.GestureRecognizers>
+                    </Image>
+                </pancakeView:PancakeView>
+                <Label
+                Text="Name"
+                FontSize="Medium"
+                HorizontalOptions="Center">
+                </Label>
+                <cc:RoundedEntry
+                    CornerRadius="15"
+                HorizontalOptions="FillAndExpand"
+                PlaceHolder="ex. Andres Quiroz Valdovinos"
+                Text="{Binding Name}">
+                </cc:RoundedEntry>
+                <Label
+                Text="Alias"
+                FontSize="Medium"
+                HorizontalOptions="Center">
+                </Label>
+                <cc:RoundedEntry
+                    CornerRadius="15"
+                HorizontalOptions="FillAndExpand"
+                PlaceHolder="ex. The Andrew"
+                Text="{Binding Alias}">
+                </cc:RoundedEntry>
+                <Label
+                Text="Phone number"
+                FontSize="Medium"
+                HorizontalOptions="Center">
+                </Label>
+                <cc:RoundedEntry
+                    CornerRadius="15"
+                HorizontalOptions="FillAndExpand"
+                PlaceHolder="complete phone number"
+                Text="{Binding PhoneNumber}">
+                </cc:RoundedEntry>
+                <Label
+                Text="Company name"
+                FontSize="Medium"
+                HorizontalOptions="Center">
+                </Label>
+                <cc:RoundedEntry
+                    CornerRadius="15"
+                HorizontalOptions="FillAndExpand"
+                PlaceHolder="ex. facebook"
+                Text="{Binding CompanyName}">
+                </cc:RoundedEntry>
+                <ActivityIndicator
+                IsRunning="{Binding IsRunning}">
+                </ActivityIndicator>
+                <pancakeView:PancakeView
+                    BackgroundGradientAngle="90"
+                    BackgroundGradientStartColor="#3f48cc"
+                    BackgroundGradientEndColor="#737cff"
+                    CornerRadius="100"
+                    HasShadow="True">
+                    <Label
+                        Margin="12"
+                        HorizontalOptions="Center"
+                        FontSize="18"
+                        Text="Add Contact"
+                        FontAttributes="Bold"
+                        TextColor="White">
+                    </Label>
+                    <pancakeView:PancakeView.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding AddContactCommand}"/>
+                    </pancakeView:PancakeView.GestureRecognizers>
+                </pancakeView:PancakeView>
+                <!--<Button
+                HorizontalOptions="FillAndExpand"
+                Text="Add Contact"
+                Command="{Binding AddContactCommand}"
+                BackgroundColor="Blue"
+                TextColor="White">
+                </Button>-->
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
