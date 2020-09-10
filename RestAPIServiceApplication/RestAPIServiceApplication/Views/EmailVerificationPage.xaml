@@ -28,7 +28,7 @@
             <cc:RoundedEntry
                 CornerRadius="15"
                 PlaceHolder="someone@example.com"
-                Text="{Binding Email}"
+                Text="{Binding Email, Mode=OneWayToSource}"
                 HorizontalOptions="FillAndExpand"
                 VerticalOptions="Center">
             </cc:RoundedEntry>
@@ -61,7 +61,7 @@
             <cc:RoundedEntry
                 CornerRadius="15"
                 PlaceHolder="Enter the verification code from your email account"
-                Text="{Binding VerificationCode}"
+                Text="{Binding VerificationCode, Mode=OneWayToSource}"
                 HorizontalOptions="FillAndExpand"
                 VerticalOptions="Center">
             </cc:RoundedEntry>

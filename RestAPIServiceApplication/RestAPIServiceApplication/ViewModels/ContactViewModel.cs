@@ -19,6 +19,7 @@ namespace RestAPIServiceApplication.ViewModels
 
         #region Class fields
         private ImageSource contactImageSource;
+        private string contactName, contactAlias, contactCompanyName;
         #endregion
 
         #region Properties
@@ -26,17 +27,17 @@ namespace RestAPIServiceApplication.ViewModels
         {
             get
             {
-                if (this.ContactImage != null)
-                    this.contactImageSource =
+                if (ContactImage != null)
+                    contactImageSource =
                         ImageSource.FromStream(() => new MemoryStream(this.ContactImage));
-                else this.contactImageSource =/* Device.RuntimePlatform == Device.UWP ? "Assets/profileImage.png" : */"profileImage";
-                return this.contactImageSource;
+                else contactImageSource =/* Device.RuntimePlatform == Device.UWP ? "Assets/profileImage.png" : */"profileImage";
+                return contactImageSource;
             }
             set 
             {
-                if (this.contactImageSource == value)
+                if (contactImageSource == value)
                     return;
-                this.contactImageSource = value;
+                contactImageSource = value;
                 OnPropertyChanged();
             }
         }

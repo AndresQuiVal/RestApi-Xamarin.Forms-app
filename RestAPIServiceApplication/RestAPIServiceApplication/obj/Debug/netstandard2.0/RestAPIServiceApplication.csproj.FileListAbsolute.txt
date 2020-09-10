@@ -48,9 +48,9 @@ C:\Users\andre\RestAPIServiceApplication\RestAPIServiceApplication\RestAPIServic
 C:\Users\andre\RestAPIServiceApplication\RestAPIServiceApplication\RestAPIServiceApplication\obj\Debug\netstandard2.0\Views\PasswordRecoverPage.xaml.g.cs
 C:\Users\andre\RestAPIServiceApplication\RestAPIServiceApplication\RestAPIServiceApplication\obj\Debug\netstandard2.0\Views\ProfilePage.xaml.g.cs
 C:\Users\andre\RestAPIServiceApplication\RestAPIServiceApplication\RestAPIServiceApplication\obj\Debug\netstandard2.0\Views\RegisterPage.xaml.g.cs
-C:\Users\andre\RestAPIServiceApplication\RestAPIServiceApplication\RestAPIServiceApplication\obj\Debug\netstandard2.0\RestAPIServiceApplication.csproj.CoreCompileInputs.cache
 C:\Users\andre\RestAPIServiceApplication\RestAPIServiceApplication\RestAPIServiceApplication\obj\Debug\netstandard2.0\RestAPIServiceApplication.AssemblyInfoInputs.cache
 C:\Users\andre\RestAPIServiceApplication\RestAPIServiceApplication\RestAPIServiceApplication\obj\Debug\netstandard2.0\RestAPIServiceApplication.AssemblyInfo.cs
+C:\Users\andre\RestAPIServiceApplication\RestAPIServiceApplication\RestAPIServiceApplication\obj\Debug\netstandard2.0\RestAPIServiceApplication.csproj.CoreCompileInputs.cache
 C:\Users\andre\RestAPIServiceApplication\RestAPIServiceApplication\RestAPIServiceApplication\obj\Debug\netstandard2.0\XamlC.stamp
 C:\Users\andre\RestAPIServiceApplication\RestAPIServiceApplication\RestAPIServiceApplication\obj\Debug\netstandard2.0\RestAPIServiceApplication.csproj.CopyComplete
 C:\Users\andre\RestAPIServiceApplication\RestAPIServiceApplication\RestAPIServiceApplication\obj\Debug\netstandard2.0\RestAPIServiceApplication.dll

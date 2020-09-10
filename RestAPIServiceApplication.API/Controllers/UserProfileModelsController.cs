@@ -11,7 +11,6 @@ using System.Web.Http.Description;
 using Microsoft.AspNet.Identity;
 using RestAPIServiceApplication.API.Data;
 using RestAPIServiceApplication.API.Models;
-using System.Linq;
 
 namespace RestAPIServiceApplication.API.Controllers
 {
@@ -116,9 +115,7 @@ namespace RestAPIServiceApplication.API.Controllers
             base.Dispose(disposing);
         }
 
-        private bool UserProfileModelExists(int id)
-        {
-            return db.UserProfileModels.Count(e => e.Id == id) > 0;
-        }
+        private bool UserProfileModelExists(int id) => 
+            db.UserProfileModels.Count(e => e.Id == id) > 0;
     }
 }

@@ -19,7 +19,6 @@ namespace RestAPIServiceApplication.ViewModels
 
         #region Class fields
         private ObservableCollection<Module> modulesCollection;
-        private ImageSource profileImageSource;
         private string userName;
         #endregion
 
@@ -36,39 +35,29 @@ namespace RestAPIServiceApplication.ViewModels
             }
         }
 
-        //public ImageSource ProfileImageSource 
-        //{
-        //    get { return this.profileImageSource; }
-        //    set 
-        //    {
-        //        if (this.profileImageSource == value)
-        //            return;
-        //        this.profileImageSource = value;
-        //        OnPropertyChanged();
-        //    }
-        //}
-
         public ImageSource ProfileImageSource { get; set; } = MemoryDataAcess.UserProfile.UserProfileImageSource;
 
-        //public string UserName 
-        //{
-        //    get { return this.userName; }
-        //    set
-        //    {
-        //        if (this.userName == value)
-        //            return;
-        //        this.userName = value;
-        //        OnPropertyChanged();
-        //    }
-        //}
+        public string UserName
+        {
+            get { return $"Bienvenido {userName}"; }
+            set
+            {
+                if (this.userName == value)
+                    return;
+                this.userName = value;
+                OnPropertyChanged();
+            }
+        }
 
-        public string UserName { get; set; } = $"Bienvenido {MemoryDataAcess.UserProfile.FirstName}!";
+
         #endregion
 
         #region Constructors
         public MasterDetailViewModel()
         {
             this.apiService = new ApiService();
+            this.UserName = MemoryDataAcess.UserProfile.FirstName;
+
             ModulesCollection = new ObservableCollection<Module>
             {
                 new Module()
@@ -91,6 +80,12 @@ namespace RestAPIServiceApplication.ViewModels
                     })
                 }
             };
+
+            MessagingCenter.Subscribe<ProfileViewModel>(
+                this, Consts.NameUpdateConst, (sender) =>
+                {
+                    UserName = MemoryDataAcess.UserProfile.FirstName;
+                });
         }
         #endregion
 

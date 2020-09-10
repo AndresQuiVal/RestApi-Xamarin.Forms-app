@@ -124,7 +124,7 @@ namespace RestAPIServiceApplication.ViewModels
                    "Bearer", MemoryDataAcess.UserProfile.Token.AccessToken));
 
             IsRunning = false;
-            string title = "Sucess", message = "Your contact has been added!";
+            string title = "Sucess", message = "Your profile has been updated!";
 
             if (!isSuccess)
             {
@@ -136,6 +136,8 @@ namespace RestAPIServiceApplication.ViewModels
                 title,
                 message,
                 "OK");
+
+            MessagingCenter.Send(this, Consts.NameUpdateConst);
 
             await App.Navigation.PopAsync();
         }
@@ -152,7 +154,8 @@ namespace RestAPIServiceApplication.ViewModels
                     "From gallery",
                     "Take snap");
 
-                if (!string.IsNullOrWhiteSpace(actionSheetResponse))
+                if (!string.IsNullOrWhiteSpace(actionSheetResponse)
+                    && actionSheetResponse != "Cancel")
                 {
                     if (actionSheetResponse == "Take snap")
                     {

@@ -6,6 +6,7 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:pancakeView="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
     xmlns:cc="clr-namespace:RestAPIServiceApplication.CustomControls"
+    Title="Profile Information"
     mc:Ignorable="d"
     x:Class="RestAPIServiceApplication.Views.ProfilePage">
     <ContentPage.Content>
@@ -16,10 +17,10 @@
                     Margin="10"
                     HorizontalOptions="Center"
                     CornerRadius="100"
-                    HeightRequest="250">
+                    WidthRequest="200"
+                    HeightRequest="200">
                     <Image
                         Aspect="AspectFit"
-                        HeightRequest="250"
                         Source="{Binding ProfileImage}">
                         <Image.GestureRecognizers>
                             <TapGestureRecognizer Command="{Binding ChangeImageCommand}"/>
@@ -35,7 +36,7 @@
                     CornerRadius="15"
                     HorizontalOptions="FillAndExpand"
                     PlaceHolder="ex. Andres Quiroz Valdovinos"
-                    Text="{Binding FirstName}">
+                    Text="{Binding FirstName, Mode=TwoWay}">
                 </cc:RoundedEntry>
                 <Label
                     Text="Last name"
@@ -46,7 +47,7 @@
                     CornerRadius="15"
                     HorizontalOptions="FillAndExpand"
                     PlaceHolder="ex. The Andrew"
-                    Text="{Binding LastName}">
+                    Text="{Binding LastName, Mode=TwoWay}">
                 </cc:RoundedEntry>
                 <ActivityIndicator
                     IsRunning="{Binding IsRunning}">

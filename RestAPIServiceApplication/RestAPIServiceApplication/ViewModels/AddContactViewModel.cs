@@ -113,7 +113,7 @@ namespace RestAPIServiceApplication.ViewModels
         public AddContactViewModel()
         {
             apiService = new ApiService();
-            ContactImage = Device.RuntimePlatform == Device.UWP ? "Assets/profileImage.png" : "profileImage";
+            ContactImage = Device.RuntimePlatform == Device.UWP ? "Assets/profileImage.png" : "profileImage.png";
         }
         #endregion
 

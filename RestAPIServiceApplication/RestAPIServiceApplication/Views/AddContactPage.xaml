@@ -25,12 +25,12 @@
                     HorizontalOptions="Start">
                 </Label>
                 <pancakeView:PancakeView
-                HorizontalOptions="Center"
-                CornerRadius="100"
-                HeightRequest="200">
+                    HorizontalOptions="Center"
+                    CornerRadius="100"
+                    HeightRequest="200">
                     <Image
                         HeightRequest="200"
-                        Source="{Binding ContactImage}">
+                        Source="profileImage">
                         <Image.GestureRecognizers>
                             <TapGestureRecognizer Command="{Binding ChangeImageCommand}"/>
                         </Image.GestureRecognizers>

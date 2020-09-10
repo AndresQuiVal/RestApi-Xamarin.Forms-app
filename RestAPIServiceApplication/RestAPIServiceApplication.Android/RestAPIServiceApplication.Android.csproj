@@ -131,8 +131,8 @@
     <Content Include="Resources\drawable-hdpi\profileModuleIcon.png" />
     <Content Include="Resources\drawable\logoutIcon.png" />
     <AndroidResource Include="Resources\drawable\phoneLogo.png" />
-    <Content Include="Resources\drawable\profileImage.png" />
     <AndroidResource Include="Resources\xml\file_paths.xml" />
+    <AndroidResource Include="Resources\drawable\profileImage.png" />
     <Content Include="Resources\drawable\profileModuleIcon.png" />
     <AndroidResource Include="Resources\layout\layout1.xml">
       <SubType>Designer</SubType>

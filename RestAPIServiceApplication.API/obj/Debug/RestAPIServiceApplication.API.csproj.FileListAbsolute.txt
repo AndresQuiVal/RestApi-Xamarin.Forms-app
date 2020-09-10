@@ -113,6 +113,10 @@ C:\Users\andre\source\repos\RestAPIServiceApplication\RestAPIServiceApplication.
 C:\Users\andre\source\repos\RestAPIServiceApplication\RestAPIServiceApplication.API\obj\Debug\RestAPIServiceApplication.API.csproj.CopyComplete
 C:\Users\andre\source\repos\RestAPIServiceApplication\RestAPIServiceApplication.API\obj\Debug\RestAPIServiceApplication.API.dll
 C:\Users\andre\source\repos\RestAPIServiceApplication\RestAPIServiceApplication.API\obj\Debug\RestAPIServiceApplication.API.pdb
+C:\Users\andre\RestAPIServiceApplication\RestAPIServiceApplication.API\obj\Debug\RestAPIServiceApplication.API.Migrations.InitialCreate.resources
+C:\Users\andre\RestAPIServiceApplication\RestAPIServiceApplication.API\obj\Debug\RestAPIServiceApplication.API.csproj.GenerateResource.cache
+C:\Users\andre\RestAPIServiceApplication\RestAPIServiceApplication.API\obj\Debug\RestAPIServiceApplication.API.csproj.CoreCompileInputs.cache
+C:\Users\andre\RestAPIServiceApplication\RestAPIServiceApplication.API\obj\Debug\RestAPIServiceApplication.API.csprojAssemblyReference.cache
 C:\Users\andre\RestAPIServiceApplication\RestAPIServiceApplication.API\bin\RestAPIServiceApplication.API.dll.config
 C:\Users\andre\RestAPIServiceApplication\RestAPIServiceApplication.API\bin\RestAPIServiceApplication.API.dll
 C:\Users\andre\RestAPIServiceApplication\RestAPIServiceApplication.API\bin\RestAPIServiceApplication.API.pdb
@@ -298,10 +302,6 @@ C:\Users\andre\RestAPIServiceApplication\RestAPIServiceApplication.API\bin\Xamar
 C:\Users\andre\RestAPIServiceApplication\RestAPIServiceApplication.API\bin\Xamarin.Essentials.xml
 C:\Users\andre\RestAPIServiceApplication\RestAPIServiceApplication.API\bin\System.Web.Http.Owin.xml
 C:\Users\andre\RestAPIServiceApplication\RestAPIServiceApplication.API\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Users\andre\RestAPIServiceApplication\RestAPIServiceApplication.API\obj\Debug\RestAPIServiceApplication.API.Migrations.InitialCreate.resources
-C:\Users\andre\RestAPIServiceApplication\RestAPIServiceApplication.API\obj\Debug\RestAPIServiceApplication.API.csproj.GenerateResource.cache
-C:\Users\andre\RestAPIServiceApplication\RestAPIServiceApplication.API\obj\Debug\RestAPIServiceApplication.API.csproj.CoreCompileInputs.cache
 C:\Users\andre\RestAPIServiceApplication\RestAPIServiceApplication.API\obj\Debug\RestAPIServiceApplication.API.csproj.CopyComplete
 C:\Users\andre\RestAPIServiceApplication\RestAPIServiceApplication.API\obj\Debug\RestAPIServiceApplication.API.dll
 C:\Users\andre\RestAPIServiceApplication\RestAPIServiceApplication.API\obj\Debug\RestAPIServiceApplication.API.pdb
-C:\Users\andre\RestAPIServiceApplication\RestAPIServiceApplication.API\obj\Debug\RestAPIServiceApplication.API.csprojAssemblyReference.cache

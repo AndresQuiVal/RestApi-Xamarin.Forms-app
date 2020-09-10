@@ -15,11 +15,11 @@
             Padding="15"
             HorizontalOptions="FillAndExpand">
                 <Label
-                Margin="10,10,10,15"
-                Text="Edit contact"
+                    Margin="10,10,10,15"
+                    Text="Edit contact"
                     FontAttributes="Bold"
-                FontSize="Large"
-                HorizontalOptions="Start">
+                    FontSize="Large"
+                    HorizontalOptions="Start">
                 </Label>
                 <pancakeView:PancakeView
                     HorizontalOptions="Center"
@@ -34,54 +34,54 @@
                     </Image>
                 </pancakeView:PancakeView>
                 <Label
-                Text="Name"
-                FontSize="Medium"
-                HorizontalOptions="Center">
+                    Text="Name"
+                    FontSize="Medium"
+                    HorizontalOptions="Center">
                 </Label>
                 <cc:RoundedEntry
                     CornerRadius="15"
-                HorizontalOptions="FillAndExpand"
-                PlaceHolder="ex. Andres Quiroz Valdovinos"
-                Text="{Binding Contact.ContactName}">
+                    HorizontalOptions="FillAndExpand"
+                    PlaceHolder="ex. Andres Quiroz Valdovinos"
+                    Text="{Binding Contact.ContactName, Mode=TwoWay}">
                 </cc:RoundedEntry>
                 <Label
-                Text="Alias"
-                FontSize="Medium"
-                HorizontalOptions="Center">
+                    Text="Alias"
+                    FontSize="Medium"
+                    HorizontalOptions="Center">
                 </Label>
                 <cc:RoundedEntry
                     CornerRadius="15"
-                HorizontalOptions="FillAndExpand"
-                PlaceHolder="ex. The Andrew"
-                Text="{Binding Contact.ContactAlias}">
+                    HorizontalOptions="FillAndExpand"
+                    PlaceHolder="ex. The Andrew"
+                    Text="{Binding Contact.ContactAlias, Mode=TwoWay}">
                 </cc:RoundedEntry>
                 <Label
-                Text="Phone number"
-                FontSize="Medium"
-                HorizontalOptions="Center">
+                    Text="Phone number"
+                    FontSize="Medium"
+                    HorizontalOptions="Center">
                 </Label>
                 <cc:RoundedEntry
                     CornerRadius="15"
-                HorizontalOptions="FillAndExpand"
-                PlaceHolder="complete phone number"
-                Text="{Binding Contact.ContactNumber}">
+                    HorizontalOptions="FillAndExpand"
+                    PlaceHolder="complete phone number"
+                    Text="{Binding Contact.ContactNumber, Mode=TwoWay}">
                 </cc:RoundedEntry>
                 <Label
-                Text="Company name"
-                FontSize="Medium"
-                HorizontalOptions="Center">
+                    Text="Company name"
+                    FontSize="Medium"
+                    HorizontalOptions="Center">
                 </Label>
                 <cc:RoundedEntry
                     CornerRadius="15"
-                HorizontalOptions="FillAndExpand"
-                PlaceHolder="ex. facebook"
-                Text="{Binding Contact.ContactCompanyName}">
+                    HorizontalOptions="FillAndExpand"
+                    PlaceHolder="ex. facebook"
+                    Text="{Binding Contact.ContactCompanyName}">
                 </cc:RoundedEntry>
                 <ActivityIndicator
-                IsRunning="{Binding IsRunning}">
+                    IsRunning="{Binding IsRunning}">
                 </ActivityIndicator>
                 <StackLayout 
-                Orientation="Horizontal">
+                    Orientation="Horizontal">
                     <pancakeView:PancakeView
                         HorizontalOptions="FillAndExpand"
                         BackgroundGradientAngle="90"

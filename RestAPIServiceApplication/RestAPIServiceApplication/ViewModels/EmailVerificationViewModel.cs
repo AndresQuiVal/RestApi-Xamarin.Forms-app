@@ -87,7 +87,7 @@ namespace RestAPIServiceApplication.ViewModels
             string title = "Success",
                 message = $"The verification code has been sent to the email: {Email}";
             
-            if (string.IsNullOrEmpty(emailVerificationCode))
+            if (!response.IsSuccessStatusCode || string.IsNullOrEmpty(emailVerificationCode))
             {
                 title = "Error";
                 message = "Something happened while making requests to our servers...";

@@ -44,6 +44,7 @@
                 <ListView
                     SeparatorVisibility="None"
                     Grid.Row="1"
+                    SelectionMode="None"
                     ItemsSource="{Binding ModulesCollection}"
                     HasUnevenRows="True">
                     <ListView.ItemTemplate>

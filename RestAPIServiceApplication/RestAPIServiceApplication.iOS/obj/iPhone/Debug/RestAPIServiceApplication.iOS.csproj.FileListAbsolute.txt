@@ -125,8 +125,14 @@ C:\Users\andre\RestAPIServiceApplication\RestAPIServiceApplication\RestAPIServic
 C:\Users\andre\RestAPIServiceApplication\RestAPIServiceApplication\RestAPIServiceApplication.iOS\bin\iPhone\Debug\Xamarin.Forms.PancakeView.dll
 C:\Users\andre\RestAPIServiceApplication\RestAPIServiceApplication\RestAPIServiceApplication.iOS\bin\iPhone\Debug\RestAPIServiceApplication.dll
 C:\Users\andre\RestAPIServiceApplication\RestAPIServiceApplication\RestAPIServiceApplication.iOS\bin\iPhone\Debug\Xamarin.Forms.Platform.iOS.dll
+C:\Users\andre\RestAPIServiceApplication\RestAPIServiceApplication\RestAPIServiceApplication.iOS\bin\iPhone\Debug\System.ComponentModel.DataAnnotations.dll
+C:\Users\andre\RestAPIServiceApplication\RestAPIServiceApplication\RestAPIServiceApplication.iOS\bin\iPhone\Debug\System.Configuration.dll
+C:\Users\andre\RestAPIServiceApplication\RestAPIServiceApplication\RestAPIServiceApplication.iOS\bin\iPhone\Debug\System.Security.dll
 C:\Users\andre\RestAPIServiceApplication\RestAPIServiceApplication\RestAPIServiceApplication.iOS\bin\iPhone\Debug\RestAPIServiceApplication.pdb
 C:\Users\andre\RestAPIServiceApplication\RestAPIServiceApplication\RestAPIServiceApplication.iOS\bin\iPhone\Debug\Xamarin.Forms.Platform.iOS.pdb
+C:\Users\andre\RestAPIServiceApplication\RestAPIServiceApplication\RestAPIServiceApplication.iOS\bin\iPhone\Debug\System.ComponentModel.DataAnnotations.xml
+C:\Users\andre\RestAPIServiceApplication\RestAPIServiceApplication\RestAPIServiceApplication.iOS\bin\iPhone\Debug\System.Configuration.xml
+C:\Users\andre\RestAPIServiceApplication\RestAPIServiceApplication\RestAPIServiceApplication.iOS\bin\iPhone\Debug\System.Security.xml
 C:\Users\andre\RestAPIServiceApplication\RestAPIServiceApplication\RestAPIServiceApplication.iOS\obj\iPhone\Debug\ibtool\_BundleResourceWithLogicalName.items
 C:\Users\andre\RestAPIServiceApplication\RestAPIServiceApplication\RestAPIServiceApplication.iOS\obj\iPhone\Debug\actool\_PartialAppManifest.items
 C:\Users\andre\RestAPIServiceApplication\RestAPIServiceApplication\RestAPIServiceApplication.iOS\obj\iPhone\Debug\actool\_BundleResourceWithLogicalName.items

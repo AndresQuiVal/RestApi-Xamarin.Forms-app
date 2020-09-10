@@ -111,7 +111,8 @@ namespace RestAPIServiceApplication.ViewModels
                     "From gallery",
                     "Take snap");
 
-                if (!string.IsNullOrWhiteSpace(actionSheetResponse))
+                if (!string.IsNullOrWhiteSpace(actionSheetResponse) 
+                    && actionSheetResponse != "Cancel")
                 {
                     if (actionSheetResponse == "Take snap")
                     {

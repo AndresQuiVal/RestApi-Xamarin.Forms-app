@@ -19,11 +19,7 @@ namespace RestAPIServiceApplication.Services
         #endregion
 
         #region Constructors
-        //public ApiService(
-        //    string urlBase = "http://localhost:44307")
-        //{
-        //    UrlBase = urlBase;
-        //}
+
         #endregion
 
         #region Methods
@@ -63,7 +59,7 @@ namespace RestAPIServiceApplication.Services
                 new MediaTypeHeaderValue("application/x-www-form-urlencoded");
 
             var response = await httpClient.PostAsync($"{UrlBase}/Token", httpContent);
-            var jsonResponse = response.Content.ReadAsStringAsync().Result;
+            var jsonResponse = await response.Content.ReadAsStringAsync();
             var jsonConvertedResponse = JsonConvert.DeserializeObject<TokenResponse>(jsonResponse);
 
             if (!response.IsSuccessStatusCode)
@@ -76,7 +72,7 @@ namespace RestAPIServiceApplication.Services
                 new AuthenticationHeaderValue("Bearer", jsonConvertedResponse.AccessToken);
 
             response = await httpClient.GetAsync($"{UrlBase}/api/Account/UserInfo");
-            jsonResponse = response.Content.ReadAsStringAsync().Result;
+            jsonResponse = await response.Content.ReadAsStringAsync();
             var jsonUserConvertedResponse = ConverterHelper.ToUserProfileViewModel(
                 JsonConvert.DeserializeObject<UserProfileModel>(jsonResponse));
 
@@ -124,13 +120,10 @@ namespace RestAPIServiceApplication.Services
                 httpClient.DefaultRequestHeaders.Authorization = auth;
 
             HttpContent httpContent;
-            string objectSerialized;
+            string objectSerialized = string.Empty;
 
             if (model != null)
                 objectSerialized = JsonConvert.SerializeObject(model);
-            else
-                objectSerialized = string.Empty;
-
 
             httpContent = new StringContent(objectSerialized);
             httpContent.Headers.ContentType =

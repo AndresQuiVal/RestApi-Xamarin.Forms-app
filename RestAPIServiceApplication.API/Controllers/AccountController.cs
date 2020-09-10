@@ -241,10 +241,10 @@ namespace RestAPIServiceApplication.API.Controllers
             var user = dbConnection.UserProfileModels.First(e => string.Equals(e.Email, model.Email));
             var userASP = UserManager.FindByEmail(model.Email);
 
-            if (userASP == null || userASP == null)
+            if (user == null || userASP == null)
                 return BadRequest();
 
-            //var rnd = new Random();
+            //var rnd = new Random(); // inserts a random password for the user to later change
             //string password = rnd.Next(000000, 999999).ToString();
 
             var userId = userASP.Id;
