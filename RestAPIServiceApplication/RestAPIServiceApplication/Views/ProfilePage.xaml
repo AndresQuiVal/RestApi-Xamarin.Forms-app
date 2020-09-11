@@ -20,7 +20,7 @@
                     WidthRequest="200"
                     HeightRequest="200">
                     <Image
-                        Aspect="AspectFit"
+                        Aspect="AspectFill"
                         Source="{Binding ProfileImage}">
                         <Image.GestureRecognizers>
                             <TapGestureRecognizer Command="{Binding ChangeImageCommand}"/>

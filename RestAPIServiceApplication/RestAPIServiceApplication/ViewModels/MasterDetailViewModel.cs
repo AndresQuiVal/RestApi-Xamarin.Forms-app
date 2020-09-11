@@ -19,6 +19,7 @@ namespace RestAPIServiceApplication.ViewModels
 
         #region Class fields
         private ObservableCollection<Module> modulesCollection;
+        private ImageSource profileImageSource;
         private string userName;
         #endregion
 
@@ -35,7 +36,17 @@ namespace RestAPIServiceApplication.ViewModels
             }
         }
 
-        public ImageSource ProfileImageSource { get; set; } = MemoryDataAcess.UserProfile.UserProfileImageSource;
+        public ImageSource ProfileImageSource 
+        {
+            get { return this.profileImageSource; }
+            set
+            {
+                if (this.profileImageSource == value) return;
+
+                this.profileImageSource = value;
+                OnPropertyChanged();
+            }
+        } 
 
         public string UserName
         {
@@ -57,6 +68,7 @@ namespace RestAPIServiceApplication.ViewModels
         {
             this.apiService = new ApiService();
             this.UserName = MemoryDataAcess.UserProfile.FirstName;
+            this.ProfileImageSource = MemoryDataAcess.UserProfile.UserProfileImageSource;
 
             ModulesCollection = new ObservableCollection<Module>
             {
@@ -85,6 +97,7 @@ namespace RestAPIServiceApplication.ViewModels
                 this, Consts.NameUpdateConst, (sender) =>
                 {
                     UserName = MemoryDataAcess.UserProfile.FirstName;
+                    ProfileImageSource = MemoryDataAcess.UserProfile.UserProfileImageSource;
                 });
         }
         #endregion
